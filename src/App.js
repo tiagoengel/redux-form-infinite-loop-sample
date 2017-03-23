@@ -40,7 +40,10 @@ class App extends Component {
 }
 
 const mapStateToProps = state => ({
-  clicks: { enhanced: true, count: state.clicks.count }
+  // This causes the error
+  clicks: { enhanced: true, count: state.clicks.count },
+  // This works
+  // clicks: state.clicks
 });
 
 const mapDispatchToProps = dispatch => ({
